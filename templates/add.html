@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} add {% endblock %}
+
+{% block main %}
+<div>
+<form action="/add" method="POST" aria-autocomplete="none" autocomplete="off">
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="a">how much water have you drank today?:</label>
+        <input type="text" class="form-control a" id="exampleInputEmail1" aria-describedby="emailHelp" name="water" placeholder="water intake(in ml)"> 
+    </div>
+    <br>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+</div>
+<h2>your history:</h2>
+<ul>
+    {%for i in data%}
+    <li>you drank {{i[0]}} ml of water on {{i[1]}}</li>
+    {%endfor%}
+</ul>
+{% endblock %}

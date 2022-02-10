@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+{% block title %} index {%endblock %}
+
+{% block main %}
+<div class="p-3 mb-2 bg-info text-white top">
+    {%if data|length() == 1%}
+        <h1>you need at least {{"{:.2f}".format(data[0][2]/0.033814)}}ml of water more today</h1>
+    {%endif%}
+</div>
+
+
+<h2 class="head">why do we need water?</h2>
+    <h3 class="head">to maximise physical ativity:</h3>
+<p>
+<ul class="list">
+    <li>if we do not stay hydrated, physical performance can suffer.</li>
+    <li>This is particularly important during intense exercise or high heat.</li>
+    <li>Dehydration can have a noticeable effect if you lose as little as 2% of your body's water content. However, it is not uncommon for athletes to lose up to 6-10% of their water weight via sweat</li> 
+    <li>This can lead to altered body temperature control, reduced motivation, increased fatigue and make exercise feel much more difficult, both physically and mentally.</li>
+    <li>Optimal hydration has been shown to prevent this from happening, and may even reduce the oxidative stress that occurs during high intensity exercise. This is not surprising when you consider that muscle is about 80% water (4Trusted Source, 5).</li>
+    <li>So, if you exercise intensely and tend to sweat, then staying hydrated can help you perform at your absolute best.</li></p>
+</ul>
+    <h3 class="head"> for good fuctioning of brain:</h3>
+<p>
+<ul class="list"> 
+    <li>Studies show that even mild dehydration (1-3% of body weight) can impair many aspects of brain function.</li>
+    <li>In a study of young women, fluid loss of 1.36% after exercise impaired both mood and concentration, and increased the frequency of headaches .</li>
+    <li>Another similar study, this time in young men, showed that fluid loss of 1.59% was detrimental to working memory and increased feelings of anxiety and fatigue.</li>
+    <li>A 1-3% fluid loss equals about 1.5-4.5 lbs (0.5-2 kg) of body weight loss for a 150 lbs (68 kg) person. This can easily occur through normal daily activities, let alone during exercise or high heat.</li>
+    <li>Many other studies, ranging from children to the elderly, have shown that mild dehydration can impair mood, memory and brain performance.</li></p>
+</ul>
+    <h3 class="head">to help in losing weight:</h3>
+<ul class="list">
+    <li>In two studies, drinking half a liter (17 ounces) of water was shown to increase metabolism by 24-30% for up to 1.5 hours .</li>
+    <li>This means that drinking 2 liters of water every day can increase your total energy expenditure by up to 96 calories per day.</li>
+    <li>The timing is important too, and drinking water half an hour before meals is the most effective. It can make you feel more full, so that you eat fewer calories .</li>
+    <li>In one study, dieters who drank half a liter of water before meals lost 44% more weight, over a period of 12 weeks .</li>
+    <li>It is actually best to drink water cold, because then the body will use additional energy (calories) to heat the water to body temperature.</li>
+</ul>
+{%endblock%}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block title%}
+activity
+{% endblock %}
+
+{% block main %}
+<form action = "/activity" method="POST" autocomplete="off">
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="a">how much extra calories did you burn?:</label>
+        <input type="text" class="form-control a" id="exampleInputEmail1" aria-describedby="emailHelp" name="cal" placeholder="Calories(in cal)" aria-autocomplete="none">
+    </div>
+    <div class="form-group">
+        <input type="submit">
+    </div>
+</form>
+<h2>your history:</h2>
+<ul>
+    {%for i in data%}
+    <li>you burnt {{i[0]}} cal on {{i[1]}}</li>
+    {%endfor%}
+</ul>
+{%endblock%}
